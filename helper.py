@@ -1,6 +1,6 @@
 import joblib
 import numpy as np
-d2v_model = joblib.load(open('word2vec.model', 'rb'))
+d2v_model = joblib.load(open('./word2vec.model', 'rb'))
 def vectorizer(text: str) -> np.ndarray:
     words = text.split()
     vector = np.zeros(100)
@@ -15,7 +15,7 @@ def remove_stopwords(text: str) -> str:
     words = text.split()
     filtered_text = ' '.join([word for word in words if word not in stop_words])
     return filtered_text
-setiment_classifier = joblib.load(open('model1.pkl', 'rb'))
+setiment_classifier = joblib.load(open('./model1.pkl', 'rb'))
 import torch
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def predict_sentiment(text: str,) -> str:
