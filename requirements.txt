@@ -3,8 +3,9 @@ pandas
 scikit-learn
 matplotlib
 seaborn
-tensorflow
-keras
 torch
 requests
-beautifulsoup4
+pickle-mixin
+gensim
+nltk
+pandas
